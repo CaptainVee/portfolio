@@ -1,0 +1,132 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: darkcyan;
+  background-color: #fff;
+  margin: 0px;
+
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  padding-top: 20px;
+  font-size: 50px;
+  font-family: Poppins,sans-serif;
+  font-weight: 900;
+  background-color: #ded02461;
+  color: cadetblue;
+
+}
+h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: darkcyan;
+  background-color: #fff;
+  margin: 0px;
+}
+
+.row {
+  margin: 0px -16px;
+}
+
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+#footer { 
+    font-size: 12px;
+    width: 100%; 
+    /* Height of the footer*/  
+    height: 50px; 
+    background: lightsteelblue; 
+    padding-top: 10px;
+    text-align: center;
+}
+.social-icons {
+  text-align: center;
+  }  
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  }
+.social-icons li a {
+  border-bottom: none;
+  }
+.social-icons li img {
+  width:50px;
+  height:50px;
+  margin-right: 20px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+      <img src="https://jonac-shop.s3.amazonaws.com/profile_pics/img4.jpg" alt="mainpic" style="width: 50%; padding-bottom: 10px" align="left">
+      <div  style="text-align: center; padding: 10px;">
+          <h1>CAPTAIN VEE</h1>
+          <h2>Hi, my name is Joseph Victor Tochukwu - but call me Captain Vee :)
+
+              I am a Software Engineer and I am very passionate about education, technology & music..            <br>
+              <br>
+              <ul class="social-icons">
+                  <li><a href="http://www.facebook.com"><img src='Twitter_1.png' /></a></li>
+                  <li><a href="http://www.twitter.com"><img src='Github_1.png' /></a></li>
+                  <li><a href="http://www.youtube.com"><img src='Youtube_1.png' /></a></li>
+              </ul>
+            </h2>
+
+    </div>
+  </div>
+{% endblock content %}
