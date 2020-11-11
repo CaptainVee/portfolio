@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['captainvee.herokuapp.com']
+ALLOWED_HOSTS = ['captainvee2.herokuapp.com']
 
 
 # Application definition
