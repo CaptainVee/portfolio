@@ -1,34 +1,83 @@
-{% extends "blog/base.html" %}
-{% block content %}
-
 <style>
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Poppins, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
+  font:20px/23px Montserrat,sans-serif;
+  font-weight: initial;
   line-height: 1.5;
-  color: darkcyan;
+  color: #4d5358;
   background-color: #fff;
-  margin: 0px;
+  margin-left: 2px;
 
 }
 
+hr.line-blue-left {
+    border: 0;
+    height: 5px;
+    background-color: #41a9c6;
+    margin-left: 0px;} 
+.logo-name {
+  font-family: "Agustina Regular";
+  font-weight: 700;
+  font-variant-ligatures: no-common-ligatures;
+  padding: 0px 10px;
+}
+
+.img{
+  width: 100%;
+}
 /* Center website */
 .main {
   max-width: 1000px;
   margin: auto;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  width: 80%;
+  float: right;
+  margin: auto;
+  text-align: center;
+}
+.card:hover {
+  box-shadow: 0 8px 10px 0 rgba(39 53 212 / 21%);
+}
+.card-img-top{
+  width: 50%
+}
+
+.animate {
+  position: relative;
+  animation-name: mymove;
+  animation-duration: 1s;
+}
+
+@keyframes mymove {
+  from {left: -50px;}
+  to {left: 0px;}
+}
+.animated {
+  position: relative;
+  animation-name: mytest;
+  animation-duration: 1s;
+}
+
+
+@keyframes mytest {
+  from {right: -50px;}
+  to {right: 0px;}
+}
+
 h1 {
   padding-top: 20px;
+  padding-left: 20px;
   font-size: 50px;
   font-family: Poppins,sans-serif;
   font-weight: 900;
-  background-color: #ded02461;
+  background-color: #96d1da14;
   color: cadetblue;
 
 }
@@ -43,7 +92,7 @@ h2 {
 }
 
 .row {
-  margin: 0px -16px;
+  margin: 50px -16px;
 }
 
 
@@ -55,7 +104,6 @@ h2 {
 
 /* Clear floats after rows */ 
 .row:after {
-  content: "";
   display: table;
   clear: both;
 }
@@ -64,16 +112,23 @@ h2 {
 .content {
   background-color: white;
   padding: 10px;
+  padding-right: 90px;
+  position: absolute;
+  left: 560px;
+  bottom: 150px;
 }
-#footer { 
+
+.footer { 
+    position: relative;
     font-size: 12px;
     width: 100%; 
+    top: 400px;
     /* Height of the footer*/  
     height: 50px; 
     background: lightsteelblue; 
     padding-top: 10px;
-    text-align: center;
 }
+
 .social-icons {
   text-align: center;
   }  
@@ -87,8 +142,8 @@ h2 {
   border-bottom: none;
   }
 .social-icons li img {
-  width:50px;
-  height:50px;
+  width:60px;
+  height:60px;
   margin-right: 20px;
 }
 
@@ -106,27 +161,82 @@ h2 {
   }
 }
 </style>
+   {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>Victor Joseph</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'vee/main.css' %}">
 </head>
-<body>
+    <div class="">
+        
+        <div class="animate">
+          <img src="{% static 'images/img5.jpg' %}" alt="project image" style="width: 40%; border-radius: 100px;">
+        </div>
 
-<!-- MAIN (Center website) -->
-<div class="main">
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-      <img src="https://jonac-shop.s3.amazonaws.com/profile_pics/img4.jpg" alt="mainpic" style="width: 50%; padding-bottom: 10px" align="left">
-      <div  style="text-align: center; padding: 10px;">
-          <h1>CAPTAIN VEE</h1>
-          <h2>Hi, my name is Joseph Victor Tochukwu - but call me Captain Vee :)
+        <div class="animated">
+          <div class="content">
 
-              I am a Software Engineer and I am very passionate about education, technology & music..            <br>
-              <br>
-              <ul class="social-icons">
-                  <li><a href="http://www.facebook.com"><img src='Twitter_1.png' /></a></li>
-                  <li><a href="http://www.twitter.com"><img src='Github_1.png' /></a></li>
-                  <li><a href="http://www.youtube.com"><img src='Youtube_1.png' /></a></li>
-              </ul>
-            </h2>
+            <h1 class="logo-name">VICTOR JOSEPH</h1>
 
+            <p class="text-muted">Hi, my name is Victor Joseph Tochukwu - but call me Vee :) I am a Software Engineer, Data Scientist and Machine Learning Engineer. I build data driven applications using tools like Python / JavaScript / Django and some other cool libraries and framework.</p>
+            <br>
+            <br>
+          
+              <!-- Add icon library -->
+            <ul class="social-icons">
+                <li><a href="http://www.github.com/CaptainVee"><img src="{% static 'images/Github.png' %}" /></a></li>
+                <li><a href="http://www.twitter.com"><img src="{% static 'images/Twitter.png' %}" /></a></li>
+                <li><a href="http://www.youtube.com"><img src="{% static 'images/Youtube.png' %}" /></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+<br>
+<br>
+<br>
+<hr class="line-blue-left">
+<br>
+<div class="animate">
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img class="img" src="{% static 'images/imga.jpg' %}" alt="Jane">
+        <div class="container">
+          <p class="title">Portfolio</p>
+          <p>Some cool stuffs I built</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img class="img" src="{% static 'images/img6.jpg' %}" alt="Jane">
+        <div class="container">
+          <p class="title">Community</p>
+          <p>Communities I help run</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img class="img" src="{% static 'images/img3.jpg' %}" alt="Jane">
+        <div class="container">
+          <p class="title">Videos</p>
+          <p>My Youtube Channel</p>
+        </div>
+      </div>
     </div>
   </div>
-{% endblock content %}
+</div>
+
+<div class ="footer">
+  <p style="position: relative; left: -400px">Copyright Captain Vee 2020 ©</p>
+</div>
