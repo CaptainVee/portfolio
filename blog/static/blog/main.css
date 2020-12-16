@@ -1,5 +1,5 @@
 body {
-  background: white;
+  background-image: url("https://jonac-shop.s3.amazonaws.com/grey.jpg");
   color: #333333;
   margin-top: 1rem;
   margin-right: 0px;
@@ -12,8 +12,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   overflow: hidden;
-  background-color: thistle;
+  background-color: #ffffffc9;
   padding: 20px 10px;
+}
+
+.content{
+  background: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 41%;
+  width: 50%;
+  height: 100%;
+  font-size: 39px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font: 19px/23px Montserrat,'Montserrat',sans-serif
+
 }
 
 .header a {
@@ -34,14 +49,18 @@ h1, h2, h3, h4, h5, h6 {
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
+  font-family: Brush Script MT, Brush Script Std, cursive;
 }
 
+.list-group-item-light {
+  background-color: #dadae661;
+}
 
 .content-section {
-  background: #eee;
+  background: white;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
+  border: 1px solid #6c6e8487;
+  border-radius: 15px;
   margin-bottom: 20px;
 }
 
@@ -128,6 +147,10 @@ a.article-title:hover {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card-img{
+  width: 100%;
+  margin-right: 16px;
 }
 .container {
   border-radius: 5px;
@@ -245,15 +268,46 @@ input[type=submit]:hover {
   clear: both;
 }
 
+.social-icons {
+  text-align: center;
+  }  
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  }
+.social-icons li a {
+  border-bottom: none;
+  }
+.social-icons li img {
+  width:70px;
+  height:70px;
+  margin-right: 20px;
+}
+
+.bar {
+   color: white;
+   font-weight: bolder;
+   display: none;
+}
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
-}
 
-.sidenav {
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: fit-content;
+}
+.card-img{
+  width: 100%;
+  margin-right: 16px;
+}
+/*.sidenav {
   width: 130px;
   position: relative;
   z-index: 2;
@@ -273,9 +327,19 @@ input[type=submit]:hover {
 
 .sidenav a:hover {
   color: #064579;
-}
+}*/
 .main {
   margin-left: 140px; /* Same width as the sidebar + left position in px */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
+}
+
+.header a {
+  padding: 4px;
+  font-size: 16px; 
+}
+
+.header a.logo {
+  font-size: 23px;
+}
 }

@@ -32,27 +32,38 @@
 			<a class= "btn btn-outline-info mb-4 " href="?page={{ page_obj.next_page_number }}">Next</a>
 			<a class= "btn btn-outline-info mb-4 " href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 		{% endif %}
-<p>
-	
-</p>
-<br>
-<br>
 	{% endif %}
-<br>
-<h2>Meet The Team</h2>
-<hr>
-<div class="row">
-  <div class="column">
-    <div class="card" style="width : 50%">
-      <img src="/media/img2.jpg" alt="Jane" style="width:100%">
-      <div class="container">
-        <h2>Victor Joseph</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Junior developer, AI and Machine learning professioinal.</p>
-        <p>captainvee3@gmail.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
+	<br>
+	<h2>Meet The Team</h2>
+	<hr>
+	<div class="row">
+	  <div class="column">
+	    <div class="card">
+	     <img src="https://drive.google.com/uc?id=1KEHXdc330wNwjBWnZ7fe6jeQ55LWm15k" alt="Profile" style="width:100%">
+	      <div class="container">
+	        <h2>Victor Joseph</h2>
+	        <p class="title">CEO & Founder</p>
+	        <p>Junior developer, AI and Machine learning professioinal.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	  <div class="column">
+	    <div class="card" style="width: 200%">
+	      <div class="container">
+			<form action="mailto:captainvee3@gmail.com" method="post" enctype="text/plain">
+			<p> <strong>You can leave me a message</strong></p>
+			Name:<br>
+			<input type="text" name="name"><br>
+			E-mail:<br>
+			<input type="text" name="mail"><br>
+			Comment:<br>
+			<input type="text" name="comment" size="50"><br><br>
+			<input type="submit" value="Send">
+			<input type="reset" value="Reset">
+			</form>
 
+	      </div>
+	    </div>
+	  </div>
 {% endblock content %}

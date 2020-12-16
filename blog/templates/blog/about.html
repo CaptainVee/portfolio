@@ -1,167 +1,4 @@
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font:20px/23px Montserrat,sans-serif;
-  font-weight: initial;
-  line-height: 1.5;
-  color: #4d5358;
-  background-color: #fff;
-  margin-left: 2px;
-
-}
-
-hr.line-blue-left {
-    border: 0;
-    height: 5px;
-    background-color: #41a9c6;
-    margin-left: 0px;} 
-.logo-name {
-  font-family: "Agustina Regular";
-  font-weight: 700;
-  font-variant-ligatures: no-common-ligatures;
-  padding: 0px 10px;
-}
-
-.img{
-  width: 100%;
-}
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 0px;
-  width: 80%;
-  float: right;
-  margin: auto;
-  text-align: center;
-}
-.card:hover {
-  box-shadow: 0 8px 10px 0 rgba(39 53 212 / 21%);
-}
-.card-img-top{
-  width: 50%
-}
-
-.animate {
-  position: relative;
-  animation-name: mymove;
-  animation-duration: 1s;
-}
-
-@keyframes mymove {
-  from {left: -50px;}
-  to {left: 0px;}
-}
-.animated {
-  position: relative;
-  animation-name: mytest;
-  animation-duration: 1s;
-}
-
-
-@keyframes mytest {
-  from {right: -50px;}
-  to {right: 0px;}
-}
-
-h1 {
-  padding-top: 20px;
-  padding-left: 20px;
-  font-size: 50px;
-  font-family: Poppins,sans-serif;
-  font-weight: 900;
-  background-color: #96d1da14;
-  color: cadetblue;
-
-}
-h2 {
-  font-family: Poppins, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.5;
-  color: darkcyan;
-  background-color: #fff;
-  margin: 0px;
-}
-
-.row {
-  margin: 50px -16px;
-}
-
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */ 
-.row:after {
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-  padding-right: 90px;
-  position: absolute;
-  left: 560px;
-  bottom: 150px;
-}
-
-.footer { 
-    position: relative;
-    font-size: 12px;
-    width: 100%; 
-    top: 400px;
-    /* Height of the footer*/  
-    height: 50px; 
-    background: lightsteelblue; 
-    padding-top: 10px;
-}
-
-.social-icons {
-  text-align: center;
-  }  
-.social-icons li {
-  display:inline-block;
-  list-style-type:none;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  }
-.social-icons li a {
-  border-bottom: none;
-  }
-.social-icons li img {
-  width:60px;
-  height:60px;
-  margin-right: 20px;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
-   {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -170,33 +7,26 @@ h2 {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <title>Victor Joseph</title>
-   <link rel="stylesheet" type="text/css" href="{% static 'vee/main.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 </head>
+
+
     <div class="">
-        
-        <div class="animate">
-          <img src="https://drive.google.com/uc?id=1KEHXdc330wNwjBWnZ7fe6jeQ55LWm15k" alt="project image" style="width: 40%; border-radius: 100px;">
-        </div>
+        <div class="content">
+          <h1>VICTOR JOSEPH</h1>
+          <p>Hi, my name is Victor Joseph Tochukwu - but call me Vee :) I am a Software Engineer, Data Scientist and Machine Learning Engineer. I build data driven applications using tools like Python / JavaScript / Django and some other cool libraries and framework.</p>
 
-        <div class="animated">
-          <div class="content">
-
-            <h1 class="logo-name">VICTOR JOSEPH</h1>
-
-            <p class="text-muted">Hi, my name is Victor Joseph Tochukwu - but call me Vee :) I am a Software Engineer, Data Scientist and Machine Learning Engineer. I build data driven applications using tools like Python / JavaScript / Django and some other cool libraries and framework.</p>
-            <br>
-            <br>
-          
-              <!-- Add icon library -->
-            <ul class="social-icons">
-                <li><a href="http://www.github.com/CaptainVee"><img src="https://drive.google.com/uc?id=1OtqwBSkLTlwrcJ_0Bh-fcSQKYibCfXRf" /></a></li>
-                <li><a href="http://www.twitter.com"><img src="https://drive.google.com/uc?id=1uUqZGG_2XCm67oQXSBSjW32kP9RoPzLp" /></a></li>
-                <li><a href="http://www.youtube.com"><img src="{% static 'images/Youtube.png' %}" /></a></li>
-            </ul>
-          </div>
-        </div>
+                      <!-- Add icon library -->
+          <ul class="social-icons">
+              <li><a href="http://www.github.com/CaptainVee"><img src="https://drive.google.com/uc?id=1OtqwBSkLTlwrcJ_0Bh-fcSQKYibCfXRf" /></a></li>
+              <li><a href="http://www.twitter.com"><img src="https://drive.google.com/uc?id=1uUqZGG_2XCm67oQXSBSjW32kP9RoPzLp" /></a></li>
+              <li><a href="http://www.youtube.com"><img src="{% static 'images/Youtube.png' %}" /></a></li>
+          </ul>
       </div>
-
+        <div class="animate">
+          <img src="{% static 'blog/img5.jpg' %}" alt="project image" style="width: 40%; border-radius: 100px;">
+        </div>
+        <button class= 'btn info' type="submit">See CV</button>
 
 <br>
 <br>
@@ -207,7 +37,7 @@ h2 {
   <div class="row">
     <div class="column">
       <div class="card">
-        <img class="img" src="https://drive.google.com/uc?id=1BGLgC0n4kv_wzLZkX6zb-tGhu76w6nhT" alt="Jane">
+        <img class="card-img" src="https://drive.google.com/uc?id=1BGLgC0n4kv_wzLZkX6zb-tGhu76w6nhT" alt="Jane">
         <div class="container">
           <p class="title">Portfolio</p>
           <p>Some cool stuffs I built</p>
@@ -217,7 +47,7 @@ h2 {
 
     <div class="column">
       <div class="card">
-        <img class="img" src="https://drive.google.com/uc?id=1YORBcq9RQlE3xGEWarERzqpFFujZnDIR" alt="Jane">
+        <img class="card-img" src="https://drive.google.com/uc?id=1YORBcq9RQlE3xGEWarERzqpFFujZnDIR" alt="Jane">
         <div class="container">
           <p class="title">Community</p>
           <p>Communities I help run</p>
@@ -227,7 +57,7 @@ h2 {
 
     <div class="column">
       <div class="card">
-        <img class="img" src="https://drive.google.com/uc?id=1dq-nVSfPVNQpLINKKi9vEC-Iai0sW2LT" alt="Jane">
+        <img class="card-img" src="https://drive.google.com/uc?id=1dq-nVSfPVNQpLINKKi9vEC-Iai0sW2LT" alt="Jane">
         <div class="container">
           <p class="title">Videos</p>
           <p>My Youtube Channel</p>
