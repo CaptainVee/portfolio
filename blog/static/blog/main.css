@@ -307,27 +307,9 @@ input[type=submit]:hover {
   width: 100%;
   margin-right: 16px;
 }
-/*.sidenav {
-  width: 130px;
-  position: relative;
-  z-index: 2;
-  top: 20px;
-  background: #eee;
-  overflow-x: hidden;
-  padding: 8px 0;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #2196F3;
+.content-section {
   display: block;
 }
-
-.sidenav a:hover {
-  color: #064579;
-}*/
 .main {
   margin-left: 140px; /* Same width as the sidebar + left position in px */
   font-size: 28px; /* Increased text to enable scrolling */
