@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import UserRegistrationForm, UserUpdateForm, ProfileUpdateForm
+from .forms import UserRegistrationForm, UserUpdateForm, ProfileUpdateForm, ChickenUpdateForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -21,6 +21,7 @@ def register(request):
 def profile(request):
 	if request.method == 'POST':
 		u_form = UserUpdateForm(request.POST, instance=request.user)
+		c_form = ChickenUpdateForm(request.POST, instance=request.user.profile)
 		p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
 
 		if u_form.is_valid() and p_form.is_valid():
@@ -30,11 +31,13 @@ def profile(request):
 			return redirect('profile')
 	else:
 		u_form = UserUpdateForm(instance=request.user)
-		p_form = ProfileUpdateForm(instance=request.user.profile)		
+		p_form = ProfileUpdateForm(instance=request.user.profile)
+		c_form = ChickenUpdateForm(instance=request.user.profile)		
 
 	context = {
 		'u_form': u_form,
-		'p_form': p_form
+		'p_form': p_form,
+		'c_form': c_form
 	}
 	return render(request, 'user/profile.html', context)
 

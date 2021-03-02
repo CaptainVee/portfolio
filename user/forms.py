@@ -21,4 +21,11 @@ class UserUpdateForm(forms.ModelForm):
 class ProfileUpdateForm(forms.ModelForm):
 	class Meta:
 		model = Profile
-		fields = ['image']		
+		fields = ['image', 'is_instructor']
+
+
+class ChickenUpdateForm(forms.ModelForm):
+	class Meta:
+		model= Profile
+		fields = ['image']
+						

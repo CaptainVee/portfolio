@@ -325,3 +325,19 @@ input[type=submit]:hover {
   font-size: 23px;
 }
 }
+
+       <img src="{% static 'blog/img5.jpg' %}" alt="Victor Joseph">
+        <h2>Victor Joseph</h2>
+        <ul>
+          <li><a href="https://github.com/atuljustano"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.instagram.com/atulkprajapati2000/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCf-KfxuY8PZBSD_8RW2nYsw"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    <div class="card-text">
+      <h1>VICTOR JOSEPH</h1>
+      <p>Hi, my name is Victor Joseph Tochukwu - but call me Vee :) I am a Software Engineer, Data Scientist and Machine Learning Engineer. I build data driven applications using tools like Python / JavaScript / Django and some other cool libraries and framework.</p>
+  </div>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">

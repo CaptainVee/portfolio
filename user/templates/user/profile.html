@@ -13,8 +13,13 @@
           {% csrf_token %}
           <fieldset class="form-group">
               <legend class="border-bottom mb-4">Profile Info</legend>
-              {{ u_form|crispy }}
-              {{ p_form|crispy }}
+              {% if user.profile.is_instructor == True%}
+                {{ u_form|crispy }}
+                {{ c_form|crispy }}
+              {% else %}
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+              {% endif %}
           </fieldset>
           <div class="form-group">
               <button class="btn btn-outline-info" type="submit">Update</button>
