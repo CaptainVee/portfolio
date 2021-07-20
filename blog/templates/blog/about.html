@@ -19,9 +19,15 @@
   <link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
 <body>
+<nav class="navbar navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand logo"href="#">Captain Vee</a>
+    <a style="font-weight: 400;" class="navbar-brand subtitle"href="{% url 'blog-home' %}">Blog</a>
 
+  </div>
+</nav> 
 <section>
-<div class="card" style=" margin-bottom: 5rem;">
+<div class="card" style="background: beige; border-top: 0px;">
   <div class="card-body">
     <h5 class="card-title first">Software Developer & Machine Learning Engineer</h5>
     <p class="card-text subtitle">I design and code beautifully simple things, and I love what I do.</p>
@@ -36,10 +42,9 @@
 </div>
 </section>
 
-  <section >
-
+  <section style="margin-top: 5rem;" >
+<h3 style="text-align: center;">About Me</h3>
     <div class="card mb-3" style="">
-      <h3 style="text-align: center;">About Me</h3>
   <div class="row g-0">
     <div class="col-md-4">
       <img src="/static/blog/developer2.gif" class="img-fluid rounded-start" alt="...">
@@ -55,10 +60,12 @@
 </div>
 </section>
 
-<section>
+
+<section style="margin-top: 6rem;">
+  <h3 style="text-align: center;">What I Do?</h3>
   <div class="card-group skills">
   <div class="card">
-    <h2 class="fa fa-cogs icon"> </h2>
+    <h2 class="fa fa-desktop icon"> </h2>
     <div class="card-body">
       <h2 class="card-title">Software Developer</h2>
       <p class="card-text">Developing highly scalable and maintainable REST APIs using Microservice Architecture</p>
@@ -66,9 +73,9 @@
               <h5>Tools</h5>
               <p>Python</p>
               <p>Django</p>
-              <p>JavaScript</p>
+              <p>Html/CSS<p>
               <p>Postgres</p>
-              <p>Heroku Deployment</p>
+              <p>Sqlite<p>
             </ul>
     </div>
   </div>
@@ -76,83 +83,82 @@
     <h2 class="fa fa-code icon"> </h2>
     <div class="card-body">
       <h2 class="card-title ">Machine Learning </h2>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">Experience with Machine Learning features like object detection and basic data analysis</p>
                         <ul>
               <h5>Tools</h5>
-              <p>Python</p>
-              <p>Django</p>
-              <p>JavaScript</p>
-              <p>Postgres</p>
-              <p>Heroku Deployment</p>
+              <p>Tensorflow</p>
+              <p>Deepstack</p>
             </ul>
     </div>
   </div>
   <div class="card">
     <h2 class="fa fa-cloud icon"> </h2>
     <div class="card-body">
-      <h2 class="card-title">Devops</h2>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h2 class="card-title">Cloud Infra-Architecture</h2>
+      <p class="card-text">Currently Learning about on multiple cloud platforms.</p>
                         <ul>
               <h5>Tools</h5>
-              <p>Python</p>
-              <p>Django</p>
-              <p>JavaScript</p>
-              <p>Postgres</p>
-              <p>Heroku Deployment</p>
+              <p>AWS</p>
+              <p>GCP</p>
+              <p>Heroku<p>
             </ul>
     </div>
   </div>
 </div>
 </section>
+<section style="margin-top: 6rem;">
 
-    </div>
-  </section>
 <h3 style="text-align: center;">Some of my past projects</h3>
+
 <div class="card-group forth">
-  <div class="card">
-    <img src="/static/blog/blog.jpg" class="card-img-top image" alt="...">
+    <div class="card text-white bg-secondary mb-3 pad">
     <div class="card-body">
       <h5 class="card-title">A Blogging Site</h5>
       <p class="card-text">Designed and built a blogging site where one can blog about any topic of your choice</p>
-    </div>
-    <div class="card-footer">
-                   <button><a href="https://github.com/CaptainVee/portfolio">Github</a></button>
-              <button><a href="https://captainvee2.herokuapp.com/">View Live</a></button>
+      <button><a href="https://github.com/CaptainVee/portfolio">Github</a></button>
+      <button><a href="https://captainvee2.herokuapp.com/">View Live</a></button>
     </div>
   </div>
-  <div class="card">
-    <img src="/static/blog/tollgator.jpg" class="card-img-top image" alt="...">
+    <div class="card text-white bg-secondary mb-3 pad">
     <div class="card-body">
       <h5 class="card-title">Tollgator</h5>
-      <p class="card-text"> An API for an online learning platform with paystack payments intergration where users buy courses or instructors can sell courses<p>
-    </div>
-    <div class="card-footer">
+      <p class="card-text"> An API for an online learning platform with paystack payments intergration where users buy courses or instructors can sell courses</p>
+      <button><a href="#">Github</a></button>
       <button><a href="https://tollgator.vercel.app/">View Live</a></button>
     </div>
   </div>
-  <div class="card">
-    <a style="font-size: 213px; margin-left: 56px; color: black;" href="" class="fa fa-th-large"></a>
-    <div class="card-body">
-      <h5 class="card-title">Ace</h5>
-      <p class="card-text">Manage your announcements for any meeting efficiently.</p>
-    </div>
-    <div class="card-footer">
-      <button><a href="https://github.com/CaptainVee/Ace">Github</a></button>
-      <button><a href="#">View Live</a></button>
-    </div>
-  </div>
-</div>
-
-  <section class="s1">
-    <div class="main-container">
-      
-
-        <div>
+      <div class="card text-white bg-secondary mb-3 pad">
+      <div class="card-body">
+        <h5 class="card-title">Ace</h5>
+        <p class="card-text"> Manage your announcements for any meeting efficiently.</p>
+          <button><a href="https://github.com/CaptainVee/Ace">Github</a></button>
+          <button><a href="#">View Live</a></button>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section>
+<div class="card-group forth">
+    <div class="card text-white bg-secondary mb-3 pad">
+    <div class="card-body">
+      <h5 class="card-title">Hope</h5>
+      <p class="card-text"> A platform where anyone can lend or receive items for free</p>
+      <button><a href="https://github.com/CaptainVee/hope">Github</a></button>
+      <button><a href="https://hopering.herokuapp.com/">View Live</a></button>
+    </div>
+  </div>
+    <div class="card text-white bg-secondary mb-3 pad">
+    <div class="card-body">
+      <h5 class="card-title">Devjobs</h5>
+      <p class="card-text"> A Job portal platfom where developers can search for Jobs</p>
+      <button><a href="#">Github</a></button>
+      <button><a href="https://devjobspjt71.netlify.app/">View Live</a></button>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+  <section style="margin-top: 6rem; margin-bottom: 3rem;">
     <h3 style="text-align: center;">Let's Talk</h3>
 <form class="fifth">
   <div class="mb-3">
@@ -164,12 +170,22 @@
     <input type="password" class="form-control" id="exampleInputPassword1">
   </div>
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
   <label for="floatingTextarea2">Comments</label>
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  
 </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-  </section> 
+  </section>
+
+<section>
+<div class="card" style="">
+  <div class="card-body">
+    <p class="card-text" style="text-align: center;">Made with <span role="img">❤️</span> by CaptainVee</p>
+  </div>
+
+</div>
+</section>
 
 </body>
 </html>

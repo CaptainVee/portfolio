@@ -2,9 +2,16 @@ body{
 	font-family: "eurostile", sans-serif;
 	color: #141c3a;
 	font-size: 1.25rem !important;
+	background: beige !important;
 }
 a{
 	color: #141c3a !important;
+}
+
+h3{
+	font-weight: 800 !important;
+	font-family: "comic sans MS";
+	font-size: #141c3a78;
 }
 .first{
 	color: #141c3a;
@@ -12,9 +19,13 @@ a{
 	font-size: 2.5rem;
 	line-height: 1.125;
 	text-align: center;
-	margin-top: 8.5rem;
+	margin-top: 4rem;
 }
-
+.logo{
+	font-size: 25px !important;
+  font-weight: bold !important;
+  font-family: Brush Script MT, Brush Script Std, cursive !important;
+}
 .subtitle {
     font-weight: 300;
     line-height: 1.5;
@@ -26,6 +37,7 @@ a{
 	align-self: center;
     height: 17rem;
     width: 14rem !important;
+    border-radius: 23px;
 
 }
 
@@ -58,6 +70,8 @@ a{
     align-self: center;
     border-radius: 10px;
     border: 1px solid #6c6e8487;
+    margin-bottom: 1.5rem;
+
 }
 
 .image{
@@ -65,11 +79,40 @@ a{
 }
 
 .forth{
-	margin: 4rem;
-	margin-bottom: 2rem;
+    margin: 0rem 6rem 0 6rem;
 }
 
 .fifth{
 	margin-left: 19rem;
     margin-right: 26rem
 }
+
+.pad{
+	margin: 2rem;
+    border-radius: 15px !important;
+    font-size: initial;
+}
+
+@media screen and (max-width: 600px) {
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 105%;
+}
+.skills{
+	padding-left: 2rem;
+    padding-right: 2rem
+}
+.fifth{
+	margin: 2rem;
+}
+.card-img{
+  width: 100%;
+  margin-right: 16px;
+}
+.content-section {
+  display: block;
+}
+
+
+
+
