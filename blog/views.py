@@ -14,7 +14,19 @@ import os
 	'post': Post.objects.all()
 	}
 	return render(request, 'blog/home.html', context)'''
-
+# def PostListView(request):
+# 	posts = Post.objects.all()
+# 	evens_odds = sorted(posts, reverse=True, key=lambda post: post.date_posted)
+# 	by_date = groupby(evens_odds, key=lambda post: post.date_posted)
+# 	for date, group in by_date:
+# 		print('-----')
+# 		print(date)
+# 		for f in group:
+# 			print(f)
+# 	context = {
+# 	'post': by_date
+# 	}
+# 	return render(request, 'blog/home.html', context)
 
 class PostListView(ListView):
 	model = Post

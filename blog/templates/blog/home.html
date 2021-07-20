@@ -3,7 +3,7 @@
 
 	{% for posts in post %}
 		<article class="media content-section">
-		  <img class="article-img" src="{{ posts.author.profile.image.url }}" alt="Avatar">
+		  <img class="article-img" src="https://restapi-4u.herokuapp.com/media/default.jpg" alt="Avatar">
 		  <div class="media-body">
 		    <div class="article-metadata">
 		      <a class="mr-2" href="{% url 'user-post' posts.author.username %}">{{ posts.author }}</a>
