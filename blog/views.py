@@ -54,11 +54,9 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 	fields = ['title', 'content']
 
 	def form_valid(self, form):
-		if self.request.user.profile.is_instructor == True:
-			form.instance.author = self.request.user
-			return super().form_valid(form)
-		else:
-			return None
+		form.instance.author = self.request.user
+		return super().form_valid(form)
+
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 	model = Post
