@@ -1,9 +1,13 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
+from django.contrib import messages
+from user.forms import ContactForm
 from .models import Post
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-
+from django.conf import settings
 import datetime
 import os
 
@@ -85,5 +89,46 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
 	return render(request, 'blog/about.html', {'title': 'About'})
+
+def resume(request):
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			subject = "Website Inquiry" 
+			body = {
+			'first_name': form.cleaned_data['first_name'], 
+			'last_name': form.cleaned_data['last_name'], 
+			'message':form.cleaned_data['message'], 
+			}
+			message = "\n".join(body.values())
+			email=  form.cleaned_data['email_address'],
+			print(email)
+			print(settings.EMAIL_HOST_USER)
+			rec = str(settings.EMAIL_HOST_USER)
+			try:
+				send_mail(subject=subject, 
+						message=message,
+						from_email='captainvee7@gmail.com', 
+						recipient_list = (rec,) ) 
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+
+			messages.success(request, f'Your Mail has been sent!')
+			return redirect ("resume")
+      
+	form = ContactForm()
+	return render(request, "blog/resume.html", {'form':form})
+
+# def resume(request):
+# 	if request.method == 'POST':
+# 		form = UserRegistrationForm(request.POST)
+# 		if form.is_valid():
+# 			form.save()
+# 			username = form.cleaned_data.get('username')
+# 			messages.success(request, f'Account created for {username}!')
+# 			return redirect('resume')
+# 		else:
+# 			form = UserRegistrationForm()
+# 	return render(request, 'blog/resume.html', {'form' : form})
 
 # Create your views here.
