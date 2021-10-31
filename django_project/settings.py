@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['captainvee2.herokuapp.com']
+ALLOWED_HOSTS = ['captainvee2.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['captainvee2.herokuapp.com']
 INSTALLED_APPS = [
     'user.apps.UserConfig',
     'blog.apps.BlogConfig',
+    'attendance.apps.AttendanceConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
