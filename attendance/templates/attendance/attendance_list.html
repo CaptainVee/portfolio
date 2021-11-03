@@ -5,7 +5,7 @@
 <a href="{% url 'attendance-create' %}"><button type="button" class="btn btn-outline-info btn-lg btn-block">Add Profile</button></a>
 	{% for posts in post %}
 		<article class="media content-section">
-		<img style="height: 227px; border-radius: 2%; max-width: -webkit-fill-available;" src="{{ posts.profile_pic.url }}" alt="profile_pic">
+		<img style="height: 227px; border-radius: 2%; max-width: -webkit-fill-available;" src="{{ }}" alt="profile_pic">
 		  <div class="media-body">
 		    <div class="article-metadata">
 		      <a class="mr-2" href="#">{{ posts.title }} {{ posts.first_name }} {{ posts.last_name }}</a>
