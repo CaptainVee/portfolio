@@ -4,7 +4,6 @@
 
 <a href="{% url 'attendance-create' %}"><button type="button" class="btn btn-outline-info btn-lg btn-block">Add Profile</button></a>
 	{% for posts in post %}
-	<p>{{ posts.profile_pic.url }}</p>
 		<article class="media content-section">
 		{% if posts.profile_pic  %}
 			<img style="height: 227px; border-radius: 2%; max-width: -webkit-fill-available;" src="{{ posts.profile_pic.url }}" alt="profile_pic">
