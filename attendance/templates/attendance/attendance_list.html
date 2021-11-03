@@ -1,6 +1,6 @@
-{% extends "blog/base.html" %}
+<!-- {% extends "blog/base.html" %}
 {% block content %}
-
+ -->
 
 <a href="{% url 'attendance-create' %}"><button type="button" class="btn btn-outline-info btn-lg btn-block">Add Profile</button></a>
 	{% for posts in post %}
@@ -38,4 +38,5 @@
 			<a class= "btn btn-outline-info mb-4 " href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 		{% endif %}
 	{% endif %}
-{% endblock content %}
+<!-- {% endblock content %}
+ -->
