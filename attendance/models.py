@@ -34,7 +34,7 @@ class AttendProfile(models.Model):
 	first_name = models.CharField(max_length=50)
 	last_name = models.CharField(max_length=50)
 	middle_name = models.CharField(max_length=50, blank=True, null=True)
-	profile_pic = models.ImageField(blank=True, null=True, upload_to='watchman_pics', default='default.jpg')
+	profile_pic = models.ImageField(upload_to='watchman_pics', default='watchman_pics/index.jpg')
 	gender = models.CharField(max_length=10, choices=GENDER)
 	whatsapp_number = models.CharField(max_length=12)
 	phone_number = models.CharField(max_length=12, blank=True, null=True)
