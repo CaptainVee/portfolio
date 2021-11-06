@@ -16,9 +16,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
 	{% if title %}
-		<title>Captain Vee Blog - {{title}}</title>
+		<title>Captain Vee {{title}}</title>
 	{% else %}
-		<title>Captain Vee Blog</title>
+		<title>Captain Vee</title>
 	{% endif %}
 	
 </head>
@@ -26,11 +26,11 @@
 	<header class="site-header">
 	  <nav>
 	    <div class="header" id="myTopnav">
-	      <a class="logo" href="{% url 'blog-home' %}">Captain Vee</a>
+	      <a class="logo" href="{% url 'blog-about' %}">Captain Vee</a>
 	      <div class="" id="navbarToggle">
 	        <div>
-	          <a class="title" href="{% url 'blog-home' %}">Home</a>
-	          <a class="" href="{% url 'blog-about' %}">About</a>
+	          <a class="title" href="{% url 'blog-about' %}">Home</a>
+	          <a class="" href="{% url 'blog-home' %}">Blog</a>
 
 	        </div>
 
