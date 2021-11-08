@@ -10,7 +10,7 @@ class AttendProfileCreateView(CreateView):
 				'first_name',
 				'last_name',
 				'middle_name',
-				'profile_pic',
+				'picture',
 				'gender',
 				'whatsapp_number',
 				'phone_number',
