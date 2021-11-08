@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('first_name', models.CharField(max_length=50)),
                 ('last_name', models.CharField(max_length=50)),
                 ('middle_name', models.CharField(blank=True, max_length=50, null=True)),
-                ('profile_pic', models.ImageField(blank=True, default='watchman_pics/index.jpg', null=True, upload_to='watchman_pics')),
+                ('picture', models.ImageField(blank=True, default='watchman_pics/index.jpg', null=True, upload_to='watchman_pics')),
                 ('gender', models.CharField(choices=[('Male', 'Male'), ('Female', 'Female')], max_length=10)),
                 ('whatsapp_number', models.CharField(max_length=12)),
                 ('phone_number', models.CharField(blank=True, max_length=12, null=True)),
