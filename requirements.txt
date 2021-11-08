@@ -1,6 +1,6 @@
-boto==2.49.0
-boto3==1.18.7
-botocore==1.21.7
+boto
+boto3
+botocore
 certifi==2018.10.15
 chardet==3.0.4
 dj-database-url==0.5.0
@@ -16,8 +16,8 @@ Pillow==5.2.0
 psycopg2==2.9.1
 python-dateutil==2.8.2
 pytz==2018.5
-s3transfer==0.5.0
+s3transfer
 six==1.16.0
-requests==2.19.1
-urllib3==1.25.4
-whitenoise==5.2.0
+requests
+urllib3
+whitenoise
