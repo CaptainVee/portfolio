@@ -57,5 +57,12 @@ class AttendProfile(models.Model):
 	def get_absolute_url(self):
 		return reverse('attendance-list')
 
+	@property
+	def get_photo_url(self):
+		if self.photo and hasattr(self.photo, 'url'):
+			return self.photo.url
+		else:
+			return "/static/images/user.jpg"
+
 
 
