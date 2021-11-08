@@ -6,7 +6,7 @@
 	{% for posts in post %}
 		<article class="media content-section">
 		{% if posts.profile_pic  %}
-			<img style="height: 227px; border-radius: 2%; max-width: -webkit-fill-available;" src="{{ posts.profile_pic.url }}" alt="profile_pic">
+			<img style="height: 227px; border-radius: 2%; max-width: -webkit-fill-available;" src="{{ posts.profile_pic.url|default_if_none:'#' }}" alt="profile_pic">
             {% endif %}
 		  <div class="media-body">
 		    <div class="article-metadata">
