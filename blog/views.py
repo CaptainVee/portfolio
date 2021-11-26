@@ -127,8 +127,9 @@ def about(request):
 			'message':form.cleaned_data['message'], 
 			}
 			message = "\n".join(body.values())
-			email=  form.cleaned_data['email_address'],
-			print(email)
+			email=  form.cleaned_data['email_address'][0],
+			# print(email)
+			# print('lfllflflfl')
 			print(settings.EMAIL_HOST_USER)
 			rec = str(settings.EMAIL_HOST_USER)
 			try:
