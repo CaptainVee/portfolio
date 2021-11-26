@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -102,6 +103,7 @@
               <p>GCP</p>
               <p>Heroku<p>
               <p>Docker<p>
+              <p>Linuxs<p>
             </ul>
     </div>
   </div>
@@ -116,24 +118,24 @@
     <div class="card-body">
       <h5 class="card-title">A Blogging Site</h5>
       <p class="card-text">Designed and built a blogging site where one can blog about any topic of your choice</p>
-      <button><a href="https://github.com/CaptainVee/portfolio">Github</a></button>
-      <button><a href="https://captainvee2.herokuapp.com/">View Live</a></button>
+      <button><a target="_blank" href="https://github.com/CaptainVee/portfolio">Github</a></button>
+      <button><a href="https://captainvee2.herokuapp.com/blog">View Live</a></button>
     </div>
   </div>
     <div class="card text-white bg-secondary mb-3 pad">
     <div class="card-body">
       <h5 class="card-title">Tollgator</h5>
       <p class="card-text"> An API for an online learning platform with paystack payments intergration where users buy courses or instructors can sell courses</p>
-      <button><a href="#">Github</a></button>
-      <button><a href="https://tollgator.vercel.app/">View Live</a></button>
+      <button><a target="_blank" href="https://github.com/CaptainVee/View">Github</a></button>
+      <button><a target="_blank" href="https://tollgator-api.herokuapp.com/api/docs/">View Docs</a></button>
     </div>
   </div>
       <div class="card text-white bg-secondary mb-3 pad">
       <div class="card-body">
         <h5 class="card-title">Ace</h5>
         <p class="card-text"> Manage your announcements for any meeting efficiently.</p>
-          <button><a href="https://github.com/CaptainVee/Ace">Github</a></button>
-          <button><a href="https://msage.herokuapp.com/">View Live</a></button>
+          <button><a target="_blank" href="https://github.com/CaptainVee/ace-1">Github</a></button>
+          <button><a target="_blank" href="https://okwu.herokuapp.com/">View Live</a></button>
       </div>
     </div>
   </div>
@@ -143,21 +145,35 @@
     <div class="card-body">
       <h5 class="card-title">Hope</h5>
       <p class="card-text"> A platform where anyone can lend or receive items for free</p>
-      <button><a href="https://github.com/CaptainVee/hope">Github</a></button>
-      <button><a href="https://hopering.herokuapp.com/">View Live</a></button>
+      <button><a target="_blank" href="https://hoperring.com/">View Live</a></button>
     </div>
   </div>
     <div class="card text-white bg-secondary mb-3 pad">
     <div class="card-body">
       <h5 class="card-title">Devjobs</h5>
       <p class="card-text"> A Job portal platfom where developers can search for Jobs</p>
-      <button><a href="#">Github</a></button>
-      <button><a href="https://devjobspjt71.netlify.app/">View Live</a></button>
+      <button><a target="_blank" href="https://documenter.getpostman.com/view/14393751/TzedfPj8#4e387f1d-ec55-4294-995f-3941bc467a9e">Docs</a></button>
+      <button><a target="_blank" href="https://devjobspjt71.netlify.app/">View Live</a></button>
     </div>
   </div>
 
   </div>
 </section>
+
+  <section class="s2">
+    <div class="main-container">
+      <a href=""></a>
+      <h3 style="text-align: center;">Let's Talk</h3>
+      <div style="margin:80px">
+        <h4>Have a project we could build together or just want to say hi, my DM is open</h4>
+        <form method="post">
+            {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+  </section> 
 
   <section style="margin-top: 6rem; margin-bottom: 3rem;">
     <h3 style="text-align: center;">Let's Talk</h3>
