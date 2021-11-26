@@ -134,8 +134,9 @@ def about(request):
 			try:
 				send_mail(subject=subject, 
 						message=message,
-						from_email= email[0], 
-						recipient_list = (rec,) ) 
+						from_email= "captainvee7@gmail.com", 
+						recipient_list = (rec,),
+						fail_silently=False,) 
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
 
