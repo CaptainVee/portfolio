@@ -127,19 +127,15 @@ def about(request):
 			'message':form.cleaned_data['message'], 
 			}
 			message = "\n".join(body.values())
-			email=  form.cleaned_data['email_address'][0],
-			# print(email)
-			# print('lfllflflfl')
+			email=  form.cleaned_data['email_address'],
+			print(email)
 			print(settings.EMAIL_HOST_USER)
 			rec = str(settings.EMAIL_HOST_USER)
 			try:
-				send_mail(
-					subject,
-					message,
-					email,
-					['captainvee7@gmail.com'],
-					fail_silently=False, 
-					) 
+				send_mail(subject=subject, 
+						message=message,
+						from_email= email[0], 
+						recipient_list = (rec,) ) 
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
 
