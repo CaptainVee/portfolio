@@ -87,9 +87,6 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 		return False
 
 
-def about(request):
-	return render(request, 'blog/about.html', {'title': 'About'})
-
 def resume(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
@@ -118,7 +115,7 @@ def resume(request):
       
 	form = ContactForm()
 	return render(request, "blog/resume.html", {'form':form})
-	
+
 def about(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
