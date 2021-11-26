@@ -118,6 +118,35 @@ def resume(request):
       
 	form = ContactForm()
 	return render(request, "blog/resume.html", {'form':form})
+	
+def about(request):
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			subject = "Website Inquiry" 
+			body = {
+			'first_name': form.cleaned_data['first_name'], 
+			'last_name': form.cleaned_data['last_name'], 
+			'message':form.cleaned_data['message'], 
+			}
+			message = "\n".join(body.values())
+			email=  form.cleaned_data['email_address'],
+			print(email)
+			print(settings.EMAIL_HOST_USER)
+			rec = str(settings.EMAIL_HOST_USER)
+			try:
+				send_mail(subject=subject, 
+						message=message,
+						from_email='captainvee7@gmail.com', 
+						recipient_list = (rec,) ) 
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+
+			messages.success(request, f'Your Mail has been sent!')
+			return redirect ("resume")
+      
+	form = ContactForm()
+	return render(request, "blog/about.html", {'form':form})
 
 # def resume(request):
 # 	if request.method == 'POST':
