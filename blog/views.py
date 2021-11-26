@@ -132,10 +132,13 @@ def about(request):
 			print(settings.EMAIL_HOST_USER)
 			rec = str(settings.EMAIL_HOST_USER)
 			try:
-				send_mail(subject=subject, 
-						message=message,
-						from_email='captainvee7@gmail.com', 
-						recipient_list = (rec,) ) 
+				send_mail(
+					subject,
+					message,
+					email,
+					['captainvee7@gmail.com'],
+					fail_silently=False, 
+					) 
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
 
