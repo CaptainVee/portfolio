@@ -20,7 +20,7 @@
   <link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
 <body>
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-light" style="background:#ffffff;">
   <div class="container-fluid">
     <a class="navbar-brand logo"href="#">Captain Vee</a>
     <a style="font-weight: 400;" class="navbar-brand subtitle"href="{% url 'blog-home' %}">Blog</a>
@@ -28,12 +28,12 @@
   </div>
 </nav> 
 <section>
-<div class="card" style="background: beige; border-top: 0px;">
+<div class="card" style="border-top: 0px; border-bottom: 0px;">
   <div class="card-body">
-    <h5 class="card-title first">Software Developer & Machine Learning Engineer</h5>
-    <p class="card-text subtitle">I design and code beautifully simple things, and I love what I do.</p>
+    <h5 class="card-title first slideanim">Software Developer & Machine Learning Engineer</h5>
+    <p class="card-text subtitle slideanim">I design and code beautifully simple things, and I love what I do.</p>
   </div>
-  <img src="/static/blog/developer.gif" class="card-img-bottom profile" alt="...">
+  <img src="/static/blog/developer.gif" class="card-img-bottom profile slideanim" alt="...">
         <div class="social-links">
         <a target="_blank"  class="fa fa-github" href="https://www.github.com/CaptainVee"></a>
         <a target="_blank"  class="fa fa-twitter" href="https://twitter.com/Joseph_Victor_T"></a>
@@ -45,13 +45,13 @@
 
   <section style="margin-top: 5rem;" >
 <h3 style="text-align: center;">About Me</h3>
-    <div class="card mb-3" style="">
+    <div class="card mb-3" style="border: 0px">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="/static/blog/developer2.gif" class="img-fluid rounded-start" alt="...">
+      <img src="/static/blog/developer222.svg" class="slideanim img-fluid rounded-start " alt="...">
     </div>
     <div class="col-md-8">
-      <div class="card-body">
+      <div class="card-body slideanim">
         <h5 class="card-title first" style="margin-top: auto;">Hi I'm Victor</h5>
         <p class="card-text about"><p>A passionate Software Engineer with primary focus on backend I have 3+ years of experience in Software Industry. Skilled in designing, building & maintaining highly scalable and available software applications.</p>
         <p>Love to learn new technologies everyday and apply them through building new projects.</p>
@@ -64,7 +64,7 @@
 
 <section style="margin-top: 6rem;">
   <h3 style="text-align: center;">What I Do?</h3>
-  <div class="card-group skills">
+  <div class="card-group skills slideanim">
   <div class="card">
     <h2 class="fa fa-desktop icon"> </h2>
     <div class="card-body">
@@ -75,6 +75,7 @@
               <p>Python</p>
               <p>Django</p>
               <p>Html/CSS<p>
+              <p>Javascript<p>
               <p>Postgres</p>
               <p>Sqlite<p>
             </ul>
@@ -114,7 +115,7 @@
 <h3 style="text-align: center;">Some of my past projects</h3>
 
 <div class="card-group forth">
-    <div class="card text-white bg-secondary mb-3 pad">
+    <div class="card text-black mb-3 pad slideanim">
     <div class="card-body">
       <h5 class="card-title">A Blogging Site</h5>
       <p class="card-text">Designed and built a blogging site where one can blog about any topic of your choice</p>
@@ -122,33 +123,7 @@
       <button><a href="https://captainvee2.herokuapp.com/blog">View Live</a></button>
     </div>
   </div>
-    <div class="card text-white bg-secondary mb-3 pad">
-    <div class="card-body">
-      <h5 class="card-title">Tollgator</h5>
-      <p class="card-text"> An API for an online learning platform with paystack payments intergration where users buy courses or instructors can sell courses</p>
-      <button><a target="_blank" href="https://github.com/CaptainVee/View">Github</a></button>
-      <button><a target="_blank" href="https://tollgator-api.herokuapp.com/api/docs/">View Docs</a></button>
-    </div>
-  </div>
-      <div class="card text-white bg-secondary mb-3 pad">
-      <div class="card-body">
-        <h5 class="card-title">Ace</h5>
-        <p class="card-text"> Manage your announcements for any meeting efficiently.</p>
-          <button><a target="_blank" href="https://github.com/CaptainVee/ace-1">Github</a></button>
-          <button><a target="_blank" href="https://okwu.herokuapp.com/">View Live</a></button>
-      </div>
-    </div>
-  </div>
-
-<div class="card-group forth">
-    <div class="card text-white bg-secondary mb-3 pad">
-    <div class="card-body">
-      <h5 class="card-title">Hope</h5>
-      <p class="card-text"> A platform where anyone can lend or receive items for free</p>
-      <button><a target="_blank" href="https://hoperring.com/">View Live</a></button>
-    </div>
-  </div>
-    <div class="card text-white bg-secondary mb-3 pad">
+      <div class="card text-black mb-3 pad slideanim">
     <div class="card-body">
       <h5 class="card-title">Devjobs</h5>
       <p class="card-text"> A Job portal platfom where developers can search for Jobs</p>
@@ -157,16 +132,51 @@
     </div>
   </div>
 
+    <div class="card text-black mb-3 pad slideanim">
+    <div class="card-body">
+      <h5 class="card-title">Tollgator</h5>
+      <p class="card-text"> An API for an online learning platform with paystack payments intergration where users buy courses or instructors can sell courses</p>
+      <button><a target="_blank" href="https://github.com/CaptainVee/View">Github</a></button>
+      <button><a target="_blank" href="https://tollgator-api.herokuapp.com/api/docs/">View Docs</a></button>
+    </div>
+  </div>
+      
+</div>
+
+<div class="card-group forth">
+    <div class="card text-black mb-3 pad slideanim">
+    <div class="card-body">
+      <h5 class="card-title">Hope</h5>
+      <p class="card-text"> A platform where anyone can lend or receive items for free</p>
+      <button><a target="_blank" href="https://hoperring.com/">View Live</a></button>
+    </div>
+  </div>
+  <div class="card text-black mb-3 pad slideanim">
+      <div class="card-body">
+        <h5 class="card-title">Explicitboard</h5>
+        <p class="card-text"> Get clear insight on your contributions</p>
+          <button><a target="_blank" href="https://github.com/CaptainVee/explicit">Github</a></button>
+          <button><a target="_blank" href="http://explicitboard.herokuapp.com/">View Live</a></button>
+      </div>
+    </div>
+      <div class="card text-black mb-3 pad slideanim">
+      <div class="card-body">
+        <h5 class="card-title">Dethinker</h5>
+        <p class="card-text"> The stackoverflow for students</p>
+          <button><a target="_blank" href="https://github.com/CaptainVee/De-thinker">Github</a></button>
+          <button><a target="_blank" href="https://captainvee.github.io/De-thinker/">View Live</a></button>
+      </div>
+    </div>
   </div>
 </section>
 
   <section class="s2">
-    <div class="main-container">
+    <div class="main-container slideanim">
       <a href=""></a>
       <h3 style="text-align: center;">Let's Talk</h3>
       <div style="margin:80px">
         <h4>Have a project we could build together or just want to say hi, my DM is open</h4>
-        <form method="post">
+        <form method="post" style="width: fit-content;">
             {% csrf_token %}
                 {{ form|crispy }}
                 <button type="submit">Submit</button>
@@ -203,6 +213,6 @@
 
 </div>
 </section>
-
+<script src="{% static 'blog/float-panel.js' %}"></script>
 </body>
 </html>

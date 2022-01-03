@@ -93,8 +93,8 @@ def resume(request):
 		if form.is_valid():
 			subject = "Website Inquiry" 
 			body = {
-			'first_name': form.cleaned_data['first_name'], 
-			'last_name': form.cleaned_data['last_name'], 
+			 
+			'name': form.cleaned_data['name'], 
 			'message':form.cleaned_data['message'], 
 			}
 			message = "\n".join(body.values())
@@ -122,8 +122,7 @@ def about(request):
 		if form.is_valid():
 			subject = "Website Inquiry" 
 			body = {
-			'first_name': form.cleaned_data['first_name'], 
-			'last_name': form.cleaned_data['last_name'], 
+			'name': form.cleaned_data['name'], 
 			'message':form.cleaned_data['message'], 
 			}
 			message = "\n".join(body.values())
@@ -134,14 +133,14 @@ def about(request):
 			try:
 				send_mail(subject=subject, 
 						message=message,
-						from_email= "captainvee7@gmail.com", 
-						recipient_list = (rec,),
+						from_email= "captainvee3@gmail.com", 
+						recipient_list = ['captainvee7@gmail.com.com'],
 						fail_silently=False,) 
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
 
 			messages.success(request, f'Your Mail has been sent!')
-			return redirect ("resume")
+			return redirect ("blog-about")
       
 	form = ContactForm()
 	return render(request, "blog/about.html", {'form':form})

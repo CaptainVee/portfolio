@@ -2,7 +2,7 @@ body{
 	font-family: "eurostile", sans-serif;
 	color: #141c3a;
 	font-size: 1.25rem !important;
-	background: beige !important;
+	background: white !important;
 }
 a{
 	color: #141c3a !important;
@@ -13,8 +13,9 @@ h3{
 	font-family: "comic sans MS";
 	font-size: #141c3a78;
 }
+
 .first{
-	color: #141c3a;
+	color: #c6cd8b;
 	font-weight: 800;
 	font-size: 2.5rem;
 	line-height: 1.125;
@@ -92,6 +93,38 @@ h3{
     border-radius: 15px !important;
     font-size: initial;
 }
+
+
+/* Sliding Animation*/
+
+.slideanim {
+    visibility:hidden;
+    visibility:visible\9;/*For old IE browsers IE6-8 */
+}
+.slideanim.slide {                  
+    visibility: visible;                  
+    animation: slide 1s;
+}
+.slideanim::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+
+
+
 
 @media screen and (max-width: 600px) {
 .card {
