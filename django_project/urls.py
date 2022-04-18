@@ -42,6 +42,7 @@ urlpatterns = [
         name='password_reset_done'),
 
     path('', include('blog.urls')),
+    path('portfolio', include('portfolio.urls')),
 ]
 
 if settings.DEBUG:

@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['captainvee2.herokuapp.com', 'localhost']
 INSTALLED_APPS = [
     'user.apps.UserConfig',
     'blog.apps.BlogConfig',
+    'portfolio.apps.PortfolioConfig',
     'attendance.apps.AttendanceConfig',
     'crispy_forms',
     'django.contrib.admin',
