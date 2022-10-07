@@ -41,8 +41,8 @@ urlpatterns = [
         auth_views.PasswordResetDoneView.as_view(template_name='user/password_reset_done.html'), 
         name='password_reset_done'),
 
-    path('', include('blog.urls')),
-    path('portfolio', include('portfolio.urls')),
+    path('blog', include('blog.urls')),
+    path('', include('portfolio.urls')),
 ]
 
 if settings.DEBUG:
