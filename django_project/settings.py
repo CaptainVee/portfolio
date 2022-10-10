@@ -33,18 +33,19 @@ ALLOWED_HOSTS = ['captainvee2.herokuapp.com', 'web-production-060d.up.railway.ap
 # Application definition
 
 INSTALLED_APPS = [
-    'user.apps.UserConfig',
-    'blog.apps.BlogConfig',
-    'portfolio.apps.PortfolioConfig',
-    'attendance.apps.AttendanceConfig',
-    'crispy_forms',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'storages'
+
+    'user',
+    'blog',
+    'portfolio',
+    'attendance',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -125,10 +126,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = 'staticfiles/'
+STATIC_URL = 'static/'
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -138,6 +141,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'smtp.gmail.com'
