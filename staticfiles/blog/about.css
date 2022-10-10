@@ -1,0 +1,151 @@
+body{
+	font-family: "eurostile", sans-serif;
+	color: #141c3a;
+	font-size: 1.25rem !important;
+	background: white !important;
+}
+a{
+	color: #141c3a !important;
+}
+
+h3{
+	font-weight: 800 !important;
+	font-family: "comic sans MS";
+	font-size: #141c3a78;
+}
+
+.first{
+	color: #c6cd8b;
+	font-weight: 800;
+	font-size: 2.5rem;
+	line-height: 1.125;
+	text-align: center;
+	margin-top: 4rem;
+}
+.logo{
+	font-size: 25px !important;
+  font-weight: bold !important;
+  font-family: Brush Script MT, Brush Script Std, cursive !important;
+}
+.subtitle {
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.profile{
+	align-self: center;
+    height: 17rem;
+    width: 14rem !important;
+    border-radius: 23px;
+
+}
+
+.about{
+	font-size: 1.5rem;
+}
+
+.skills{
+	padding-left: 6rem;
+	padding-right: 6rem;
+	text-align: center;
+}
+
+.icon{
+	align-self: center;
+	font-size: 4rem !important;
+	padding-top: 3rem;
+	color: #141c3a
+}
+.third{
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.social-links{
+	font-size: 2rem;
+    color: #141c3a !important;
+    width: 7rem;
+    padding-left: 3px;
+    align-self: center;
+    border-radius: 10px;
+    border: 1px solid #6c6e8487;
+    margin-bottom: 1.5rem;
+
+}
+
+.image{
+	width: 50% !important;
+}
+
+.forth{
+    margin: 0rem 6rem 0 6rem;
+}
+
+.fifth{
+	margin-left: 19rem;
+    margin-right: 26rem
+}
+
+.pad{
+	margin: 2rem;
+    border-radius: 15px !important;
+    font-size: initial;
+}
+
+
+/* Sliding Animation*/
+
+.slideanim {
+    visibility:hidden;
+    visibility:visible\9;/*For old IE browsers IE6-8 */
+}
+.slideanim.slide {                  
+    visibility: visible;                  
+    animation: slide 1s;
+}
+.slideanim::after {
+    /* useful when its child elements are float:left; */
+    content: "";
+    display: table;
+    clear: both;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 105%;
+}
+.skills{
+	padding-left: 2rem;
+    padding-right: 2rem
+}
+.fifth{
+	margin: 2rem;
+}
+.card-img{
+  width: 100%;
+  margin-right: 16px;
+}
+.content-section {
+  display: block;
+}
+
+
+
+
