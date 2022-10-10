@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['captainvee2.herokuapp.com', 'https://web-production-060d.up.railway.app/', 'localhost']
+ALLOWED_HOSTS = ['captainvee2.herokuapp.com', 'web-production-060d.up.railway.app', 'localhost']
 
 
 # Application definition
