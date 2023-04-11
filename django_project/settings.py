@@ -27,7 +27,7 @@ SECRET_KEY = 'dfdf'#os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.captainvee.com', 'web-production-34b7.up.railway.app', 'localhost', 'captainvee.com']
+ALLOWED_HOSTS = ['www.captainvee.com', ' 3.83.153.47', 'localhost', 'captainvee.com']
 
 
 # Application definition
