@@ -27,7 +27,7 @@ SECRET_KEY = 'dfdf'#os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.captainvee.com', ' 3.83.153.47', 'localhost', 'captainvee.com']
+ALLOWED_HOSTS = ['3.83.153.47', 'localhost', 'www.captainvee.com', 'captainvee.com']
 
 
 # Application definition
@@ -125,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
