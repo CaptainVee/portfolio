@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Captain Vee</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="blog-header lh-1 py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    <a class="btn btn-outline-danger" href="{% url 'portfolio-home' %}">Home</a>
+                </div>
+            </div>
+    </div>
+    </header>
+    </div>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 rounded text-dark border">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">Welcome to my blog</h1>
+                <form class="form-inline d-flex">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Search</button>
+                </form>
+                <p class="lead my-3">To add a tag to the search, type the tag with [ ] around it. Or search this query
+                    on [questions and answers].</p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            {% for blog_post in blog_posts %}
+            <div class="col-12 mx-auto" style="max-width: 800px;">
+                <div class="row g-0 rounded flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <h4 class="mb-0"><strong>{{ blog_post.title }}</strong></h4>
+                    <small class="mb-2 mt-1 text-muted">{{ blog_post.created_at }}</small>
+                    <img src="{% static 'img/banner.jpg' %}" class="card-img-top" alt="..." style="max-height: 25em;">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <p class="card-text mb-auto">{{ blog_post.content.html|safe|truncatewords_html:20 }}</p>
+                        <a href="{% url 'blog-post' blog_post.pk %}" class="stretched-link">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="contact-info-item">
+            <div class="social-links">
+                <a href="https://github.com/CaptainVee" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/Joseph_Victor_T" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/josephvictort/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

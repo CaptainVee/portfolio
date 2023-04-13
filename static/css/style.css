@@ -286,7 +286,7 @@ button{
 .page-loader div:nth-child(2){
   height: 45px;
   width: 45px;
-  border-color: var(--blue):;
+  border-color: var(--blue);
   animation-duration: 1.2s;
 }
 .page-loader div:nth-child(3){
@@ -886,6 +886,38 @@ Portifolio Section
 }
 
 
+/* blog */
+/* The order in which this is arranged is important */
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+}
+
+pre, .hljs-title{
+  color: #d2a8ff;
+}
+
+pre, .hljs-string{
+  color: #a5d6ff
+}
+
+pre, .hljs-attr {
+  color: #ffa657;
+}
+
+pre, .hljs-keyword{
+  color: #ff7b72
+}
+
+pre, .hljs-params{
+  color: var(--white);
+}
+pre, code {
+  font-size: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #1f2937;
+}
 /*---------Responsive------------*/
 @media(max-width: 991px){
   .container{
@@ -952,52 +984,3 @@ Portifolio Section
     font-size: 20px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'blog',
     'portfolio',
     'crispy_forms',
+    "crispy_bootstrap4",
+    "django_quill",
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -164,3 +167,34 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # AWS_DEFAULT_ACL = None
 
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+
+# {"theme": "snow", 
+# "modules": 
+#     {"syntax": True, 
+#         "toolbar": 
+#             [
+#                 [{"font": []},
+#                 {"header": []},
+#                 {"align": []},
+#                 "bold",
+#                 "italic",
+#                 "underline", 
+#                 "strike", 
+#                 "blockquote", 
+#                 {"color": []}, 
+#                 {"background": []}], 
+#                 ["code-block", "link", "image", "video"], 
+#                 ["clean"]
+#             ], 
+#         "imageCompressor": {"quality": 0.8,
+#                             "maxWidth": 2000,
+#                             "maxHeight": 2000,
+#                             "imageType": "image/jpeg",
+#                             "debug": False, 
+#                             "suppressErrorLogging": True
+#                             }, 
+#         "resize": {"showSize": True, "locale": {}}
+#     }
+# }
