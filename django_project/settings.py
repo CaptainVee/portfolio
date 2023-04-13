@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     "crispy_bootstrap4",
     "django_quill",
-    'ckeditor',
 ]
 
 MIDDLEWARE = [
