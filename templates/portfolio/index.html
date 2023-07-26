@@ -51,7 +51,7 @@
               <ul>
                 <li><a href="#home" class="nav-item link-item">home</a></li>
                 <li><a href="#about" class="nav-item link-item">about</a></li>
-                <li><a href="#portfolio" class="nav-item link-item">portfolio</a></li>
+                <li><a href="#portfolio" class="nav-item link-item">projects</a></li>
                 <li><a href="#contact" class="nav-item link-item">contact</a></li>
                 <li><a href="{% url 'blog-list' %}" class="nav-item link-item">blog</a></li>
               </ul>
@@ -70,7 +70,7 @@
             <h1>Victor Joseph</h1>
             <h2>Software developer and Machine Learning Engineer</h2>
             <a href="#about" class="btn link-item"> more about me</a>
-            <a href="#portfolio" class="btn link-item"> portfolio</a>
+            <a href="#portfolio" class="btn link-item"> projects</a>
             <div class="contact-info-item">
               <div class="social-links">
                 <a href="https://github.com/CaptainVee" target="_blank"><i class="fab fa-github"></i></a>
@@ -186,12 +186,46 @@
               </div>
             </div>
             <!-- education end -->
-
+            
+            <!-- experience start -->
             <div class="tab-content active" id="experience">
               <div class="timeline">
+                  <!-- experience item start -->
+                  <div class="timeline-item">
+                    <span class="date">JAN 2023 - PRESENT</span>
+                    <h4><strong>Backend Engineer (Contract)</strong> - <a href="https://tracr.dk/"><span>Tracr</span></a></h4>
+                    <p>
+                      <li>Collaborated in the development of a robust and scalable web application  Django Rest Framework.</li>
+                      <li>Created a data extraction function for Excel documents, enabling the transformation of raw data into 
+                        actionable insights for meaningful business use.</li>
+                      <li>Played a key role in database design and optimization, resulting in improved site performance and 
+                        reduced response times for API requests.</li>
+                    </p>
+                  </div>
+                  <!-- experience item end -->
+
+                  <!-- experience item start -->
+                  <div class="timeline-item">
+                    <span class="date">JUN 2023 - AUG 2023</span>
+                    <h4><strong>Software Developer</strong> - <a href="https://fellowship.mlh.io/"><span>MLH Fellowship
+                        </span></a><a href="https://opensource.fb.com/">(Meta)</a></h4>
+                    <p>
+                      <li>Successfully ported all command-line-based text preprocessing in the LASER (Language-Agnostic 
+                        SEntence Representations) model from Facebook Research to Python, improving efficiency and ease of use.</li>
+                      <li>Developed comprehensive test suites with pytest to validate the functionality of the text preprocessing 
+                        system migrated to Python.</li>
+                      <li>Implemented GitHub Actions to automate test execution upon each push, ensuring continuous integration and 
+                        maintaining code quality.</li>
+                      <li>Successfully made the LASER model pip-installable, enhancing accessibility and ease of integration for developers and researchers.
+                      </li>
+                    </p>
+                  </div>
+                  <!-- experience item end -->
+
+                <!-- experience item start -->
                 <div class="timeline-item">
                   <span class="date">MAY 2022 - OCT 2022</span>
-                  <h4><strong>Software Developer</strong> - <a href="https://diylaw.ng/"><span> DIYLaw Technologies Ltd
+                  <h4><strong>Software Developer</strong> - <a href="https://diylaw.ng/"><span>DIYLaw Technologies Ltd
                       </span></a></h4>
                   <p>
                     <li>Assisted in redesigning the website from its original version, which was built using traditional
@@ -204,6 +238,9 @@
                       deployment.</li>
                   </p>
                 </div>
+                <!-- experience item end -->
+
+                <!-- experience item start -->
                 <div class="timeline-item">
                   <span class="date">JUL 2022 - AUG 2022</span>
                   <h4>
@@ -214,16 +251,22 @@
                     <li>Performed comprehensive testing of the app to verify its functionality and performance</li>
                   </p>
                 </div>
+                <!-- experience item end -->
+
+                <!-- experience item start -->
                 <div class="timeline-item">
                   <span class="date">AUG 2021 - OCT 2021</span>
-                  <h4><strong>Backend Developer (Intern)</strong> - <span>HNG internship</span></h4>
+                  <h4><strong>Backend Developer (Intern)</strong> - <a href="https://www.zuri.team/"><span>HNG Internship
+                  </span></a></h4>
                   <p>
                     <li>Developed RESTful APIs with Python and Django</li>
                   </p>
                 </div>
+                <!-- experience item end -->
+                <!-- experience item start -->
                 <div class="timeline-item">
                   <span class="date">MAR 2021 - JUL 2021</span>
-                  <h4><strong>Backend Developer (Intern)</strong> - <span>Zuri Team</span></h4>
+                  <h4><strong>Backend Developer (Intern)</strong> - <a href="https://www.zuri.team/"><span>Zuri Team</span></a></h4>
                   <p>
                     <li>Implemented CRUD RESTful APIs</li>
                     <li>Developed a chat app using Sockets and Channels in Django</li>
@@ -234,8 +277,6 @@
               </div>
             </div>
             <!-- Experience end -->
-
-
 
             <a href="https://docs.google.com/document/d/1d3M0tYbUyh_sZaPXO0n1fBkgjAgKpI_JgrSkMGo9TKo/edit?usp=sharing"
               target="_blank" class="btn">view cV</a>
@@ -260,39 +301,69 @@
             <div class="portfolio-item-thumbnail">
               <img src="{% static 'img/portfolio/1.png'%}" alt="portfolio item thumbnail" />
             </div>
-            <h3 class="portfolio-item-title">Hoperring</h3>
+            <h3 class="portfolio-item-title">Tollgator</h3>
             <button type="button" class="btn view-project-btn">
               view project
             </button>
             <div class="portfolio-item-details">
               <div class="description">
                 <p>
-                  This is my recent startup that I am most proud of. It is a website that helps connect people with
-                  little or no experience and/or experienced individuals who wants to volunteer their skills, to
-                  companies who a looking for free or cheap labour.
-
-                  Some key features present in the site are. News-feed section, Chatting section, Job Listing Section
+                  An online learning platform. You can create an online course with just a 
+                  youtube playlist link and the plateform will extract all the videos from the playlist and convert 
+                  it to an online course people can buy.
                 </p>
               </div>
               <div class="general-info">
                 <ul>
-                  <!--                     <li>Created - <span>4 Dec 2020</span></li>
- -->
+
                   <li>
-                    Tecnologies used - <span>Html, Css, Javascript, Python, Django, Django-channels, AWS, Bootstrap,
-                      Docker, Celery, Linux</span>
+                    Tecnologies used - <span>Python, Django-rest-framwork, Youtube API, Celery, Celery-beat, AWS, GCP, HTMX, CI/CD</span>
                   </li>
                   <li>Role - <span>FullStack</span></li>
                   <li>
                     View online -
                     <span><a target="_blank"
-                        href="https://web-production-465a.up.railway.app">web-production-465a.up.railway.app</a></span>
+                        href="https://tollgator.com">tollgator.com</a></span>
+                  </li>
+                  <li>
+                    github -
+                    <span><a href="https://github.com/CaptainVee/tollgator" target="_blank">github-link</a></span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+          <!--       Portfolio Item End -->
 
+          <!--       Portfolio Item Start -->
+          <div class="portfolio-item">
+            <div class="portfolio-item-thumbnail">
+              <img src="{% static 'img/portfolio/3.png'%}" alt="portfolio item thumbnail" />
+            </div>
+            <h3 class="portfolio-item-title">Medium Clone</h3>
+            <button type="button" class="btn view-project-btn">
+              view project
+            </button>
+            <div class="portfolio-item-details">
+              <div class="description">
+                <p>
+                  This is an API that clones the basic functionality of the popular blogging site called medium
+                </p>
+              </div>
+              <div class="general-info">
+                <ul>
+                  <li>
+                    Technologies used - <span>Django-rest-framework, Flower, Celery, docker</span>
+                  </li>
+                  <li>Role - <span>Backend</span></li>
+                  <li>
+                    github -
+                    <span><a href="https://github.com/CaptainVee/medium-clone" target="_blank">github-link</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <!--       Portfolio Item End -->
 
           <!--       Portfolio Item Start -->
@@ -324,14 +395,14 @@
                   <li>
                     View online -
                     <span><a href="https://devjobspjt71.netlify.app/"
-                        target="_blank">https://devjobspjt71.netlify.app/</a></span>
+                        target="_blank">devjobspjt71.netlify.app/</a></span>
                   </li>
-                  <li>
+                  <!-- <li>
                     Docs -
                     <span><a
                         href="https://documenter.getpostman.com/view/14393751/TzedfPj8#4e387f1d-ec55-4294-995f-3941bc467a9e"
                         target="_blank">postman docs</a></span>
-                  </li>
+                  </li> -->
 
                 </ul>
               </div>
@@ -340,81 +411,6 @@
 
           <!--       Portfolio Item End -->
 
-          <!--       Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="{% static 'img/portfolio/3.png'%}" alt="portfolio item thumbnail" />
-            </div>
-            <h3 class="portfolio-item-title">Blogging Website</h3>
-            <button type="button" class="btn view-project-btn">
-              view project
-            </button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>
-                  This is a simple blogging website where people can sign up and write blogs.
-                  It has a full CRUD functionality
-                </p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>
-                    Tecnologies used - <span>Html, Css, Bootstrap, AWS, Heroku</span>
-                  </li>
-                  <li>Role - <span>Fullstack</span></li>
-                  <li>
-                    View online -
-                    <span><a href="https://www.captainvee.com/blog" target="_blank">www.captainvee.com/blog</a></span>
-                  </li>
-                  <li>
-                    github -
-                    <span><a href="https://github.com/CaptainVee/portfolio" target="_blank">github-link</a></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--       Portfolio Item End -->
-          <!--       Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="{% static 'img/portfolio/4.png'%}" alt="portfolio item thumbnail" />
-            </div>
-            <h3 class="portfolio-item-title">Explicit</h3>
-            <button type="button" class="btn view-project-btn">
-              view project
-            </button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>
-                  This was created for the Ingressive For Good hackathon. It helps people to link multiple back accounts
-                  and get realtime updates on transactions taking place in those accounts. This was done with the help
-                  of <a href="https://mono.co/">mono API</a>
-                </p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>
-                    Tecnologies used - <span>Html, Css, Javascript, Bootstrap, Django, Mono API, Heroku, Data anlytics
-                      with Pandas</span>
-                  </li>
-                  <li>Role - <span>Fullstack</span></li>
-                  <li>
-                    View online -
-                    <span><a href="http://explicitboard.herokuapp.com/"
-                        target="_blank">http://explicitboard.herokuapp.com/</a></span>
-                  </li>
-                  <li>
-                    github -
-                    <span><a href="https://github.com/CaptainVee/explicit" target="_blank">github-link</a></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--       Portfolio Item End -->
           <!--       Portfolio Item Start -->
           <div class="portfolio-item">
             <div class="portfolio-item-thumbnail">
@@ -437,11 +433,11 @@
                       Bootstrap</span>
                     </li>
                     <li>Role - <span>Fullstack</span></li>
-                    <li>
+                    <!-- <li>
                       View online -
                       <span><a href="https://zuri-chats.herokuapp.com/"
                           target="_blank">zuri-chats.herokuapp.com/</a></span>
-                    </li>
+                    </li> -->
                     <li>
                       github -
                       <span><a href="https://github.com/CaptainVee/chat-app" target="_blank">github-link</a></span>
@@ -452,125 +448,6 @@
           </div>
 
           <!--       Portfolio Item End -->
-
-          <!--       Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="{% static 'img/portfolio/6.png'%}" alt="portfolio item thumbnail" />
-            </div>
-            <h3 class="portfolio-item-title">Ace</h3>
-            <button type="button" class="btn view-project-btn">
-              view project
-            </button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>
-                  This is a announcemnt managing website. Users can create announcements withing a workspace. Those
-                  announcement are kept there until it expires.
-                </p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>
-                    Tecnologies used - <span>Html, Css, Bootstrap, Django, AWS, Heroku, </span>
-                  </li>
-                  <li>Role - <span>Fullstack</span></li>
-                  <li>
-                    View online -
-                    <span><a href="https://okwu.herokuapp.com/" target="_blank">https://okwu.herokuapp.com/</a></span>
-                  </li>
-                  <li>
-                    github -
-                    <span><a href="https://github.com/CaptainVee/ace-1" target="_blank">github-link</a></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--       Portfolio Item End -->
-
-
-          <!--       Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="{% static 'img/portfolio/7.png'%}" alt="portfolio item thumbnail" />
-            </div>
-            <h3 class="portfolio-item-title">Product Hunt Clone</h3>
-            <button type="button" class="btn view-project-btn">
-              view project
-            </button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>
-                  This is a <a href="https://www.producthunt.com/">product hunt</a> clone. It has the MVP functionality
-                  of product hunt
-                </p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>
-                    Tecnologies used - <span>Django, Django-rest-framework, react, AWS, Heroku, </span>
-                  </li>
-                  <li>Role - <span>Backend, Frontend(a little)</span></li>
-                  <li>
-                    View online -
-                    <span><a href="https://product-hunt-two.vercel.app/"
-                        target="_blank">https://product-hunt-two.vercel.app/</a></span>
-                  </li>
-                  <li>
-                    github
-                    <span><a href="https://github.com/CaptainVee/Rest" target="_blank">github-link</a></span>
-                  </li>
-                  <li>
-                    Docs -
-                    <span><a href="https://restapi-4u.herokuapp.com/api/docs/" target="_blank">docs</a></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--       Portfolio Item End -->
-
-          <!--       Portfolio Item Start -->
-          <div class="portfolio-item">
-            <div class="portfolio-item-thumbnail">
-              <img src="{% static 'img/portfolio/1.jpg'%}" alt="portfolio item thumbnail" />
-            </div>
-            <h3 class="portfolio-item-title">Tollgator API</h3>
-            <button type="button" class="btn view-project-btn">
-              view project
-            </button>
-            <div class="portfolio-item-details">
-              <div class="description">
-                <p>
-                  This is an API for an online course selling platform. You can register as an instructor an create
-                  online courses. You can also register as a student and buy online courses
-                </p>
-              </div>
-              <div class="general-info">
-                <ul>
-                  <li>
-                    Tecnologies used - <span>Django, Django-rest-framework, AWS, Heroku, Swagger, <a
-                        href="https://paystack.com/">Paystack</a>, Postman </span>
-                  </li>
-                  <li>Role - <span>Backend</span></li>
-                  <li>
-                    Docs -
-                    <span><a href="https://tollgator-api.herokuapp.com/api/docs/" target="_blank">docs</a></span>
-                  </li>
-                  <li>
-                    github -
-                    <span><a href="https://github.com/CaptainVee/View" target="_blank">github-link</a></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!--       Portfolio Item End -->
-
         </div>
       </div>
     </section>
